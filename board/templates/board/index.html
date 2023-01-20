@@ -1,4 +1,4 @@
-{% extends 'common.base.html' %}
+{% extends 'common/base.html' %}
 
 
 {% block title %}
@@ -9,7 +9,7 @@
 <nav>
     <ul style="display:inline-block;">
         {% for category  in categorys %}
-            <li><a href="{% url 'board:board_index' category.category %}">{{category.category}}</a></li>
+            <li><a href="{% url 'board:board_main' category.category %}">{{category.category}}</a></li>
         {% endfor %}
     </ul>
 </nav>
