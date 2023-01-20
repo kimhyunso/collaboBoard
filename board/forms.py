@@ -9,10 +9,10 @@ class BoardForm(forms.ModelForm):
         model = models.Board
         fields = ('title', 'content', 'create_at', )
 
-class CateForm(forms.ModelForm):
+class CategoryForm(forms.ModelForm):
     class Meta:
-        model = models.Cate
-        fields = ('cate', )
+        model = models.Category
+        fields = ('category', )
 
 class CommentForm(forms.ModelForm):
     content = forms.CharField(max_length=100)
