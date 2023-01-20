@@ -23,7 +23,6 @@ class Board(models.Model):
 class Category(models.Model):
     category = models.CharField(choices=CATEGORY_LIST_CHOICE, max_length=2)
     level = models.IntegerField()
-    board_relation = models.ManyToManyField(Board, related_name='category')
 
 class Comment(models.Model):
     board = models.ForeignKey(Board, on_delete=models.CASCADE)
