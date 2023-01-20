@@ -18,4 +18,5 @@ class CommentForm(forms.ModelForm):
     content = forms.CharField(max_length=100)
     class Meta:
         model = models.Comment
-        fields = ('content', )
+
+        fields = ('content',)
