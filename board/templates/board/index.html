@@ -1,4 +1,4 @@
-{% extends 'common.base.html' %}
+{% extends 'common/base.html' %}
 
 
 {% block title %}
@@ -6,14 +6,6 @@
 {% endblock title %}
 
 {% block content %}
-<nav>
-    <ul style="display:inline-block;">
-        {% for category  in categorys %}
-            <li><a href="{% url 'board:board_index' category.category %}">{{category.category}}</a></li>
-        {% endfor %}
-    </ul>
-</nav>
-
 {% for board in boards %}
 <table>
     <tr>
@@ -23,7 +15,10 @@
     </tr>
 </table>
 {% endfor %}
-<button>새글 등록</button>
+<form action="" method="post">
+    {% csrf_token %}
+    <button>새글 등록</button>
+</form>
 
 {% endblock content %}
 

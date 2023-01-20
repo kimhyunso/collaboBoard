@@ -9,9 +9,9 @@ class Board:
     def index(request):
         # 카테고리에 있는 내용을 가지고 온다....
         context = {
-            'board' : BoardForm(),
-            'categorys' : CategoryForm(),
+            'boards' : Board(),
         }
+
         return render(request, 'board/index.html', context)
 
     @require_safe
